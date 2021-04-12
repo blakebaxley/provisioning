@@ -8,9 +8,9 @@ We still need to add a global call (if needed) and a call to the PDDB endpoint o
 2. Install python 3.8.0: ```pyenv install 2.7.13```
 3. Install mysql8 in whatever way you prefer, and create a user named skeema with the password Pardot07
 4. Install Skeema from Homebrew
-5. Create a virtualenv for e11y:  ```pyenv virtualenv 3.8.0 e11y```
+5. Create a virtualenv for e11y:  ```pyenv virtualenv 3.8.0 e11y2```
 6. git clone this repo 
-7. ```cd top/level/of/this/project; pyenv local e11y``` (This will make the e11y virtual environment activated whenever you enter this directory)
+7. ```cd top/level/of/this/project; pyenv local e11y2``` (This will make the e11y virtual environment activated whenever you enter this directory)
 8. ```cd provisioning; sudo pip install -r requirements.txt [--ignore-installed]```
 9. ```cd ../skeema_files;   skeema init -u skeema -pPardot07 -h localhost```
 
