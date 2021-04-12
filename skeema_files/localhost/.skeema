@@ -1,6 +1,0 @@
-generator=skeema:1.5.0-community
-
-[production]
-flavor=mysql:8.0
-host=localhost
-socket=/tmp/mysql.sock
