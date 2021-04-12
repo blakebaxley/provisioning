@@ -1,6 +1,8 @@
+# E11y Provisioning POC 
 This is a basic first swing at a POC for e11y account using skeema for schema creation 
+We still need to add a global call (if needed) and a call to the PDDB endpoint on the proxy, but there is prior art for all of that
 
-##Setup
+## Setup
 
 1. Install pyenv and pyenv-virtualenv from Homebrew. (You will need to modify your .bash_profile after doing it, see the brew install output)
 2. Install python 3.8.0: ```pyenv install 2.7.13```
@@ -12,13 +14,13 @@ This is a basic first swing at a POC for e11y account using skeema for schema cr
 8. ```cd provisioning; sudo pip install -r requirements.txt [--ignore-installed]```
 9. ```cd ../skeema_files;   skeema init -u skeema -pPardot07 -h localhost```
 
-##Running the app
+## Running the app
 
 In a separate terminal window, cd to the provisioning folder (where this file is)
 
 ```python app.py```
 
-##Testing the API
+## Testing the API
 In a separate terminal window, make a post to the endpoint, and check to see if a new schema was created in the database
 
 ```curl -i -H "Content-Type: application/json" -X POST -d '{"sName":"54552"}' http://localhost:5000/e11y/api/createSchema```
