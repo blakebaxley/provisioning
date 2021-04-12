@@ -25,3 +25,7 @@ In a separate terminal window, make a post to the endpoint, and check to see if 
 
 ```curl -i -H "Content-Type: application/json" -X POST -d '{"sName":"54552"}' http://localhost:5000/e11y/api/createSchema```
 
+Then drop all the tables with the deprovisioning call
+
+```curl -i -H "Content-Type: application/json" -X POST -d '{"sName":"54552"}' http://localhost:5000/e11y/api/deleteSchema```
+
