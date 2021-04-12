@@ -1,0 +1,4 @@
+Initialize skeema here 
+skeema init -u skeema -pPardot07 -h localhost
+
+* If you use any host other than localhost, update the path in the app.py accordingly
