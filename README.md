@@ -4,15 +4,16 @@ We still need to add a global call (if needed) and a call to the PDDB endpoint o
 
 ## Setup
 
-1. Install pyenv and pyenv-virtualenv from Homebrew. (You will need to modify your .bash_profile after doing it, see the brew install output)
+1. Install pyenv and pyenv-virtualenv from Homebrew. *(per the Brew install output, you will need to modify your ```.bash_profile``)*
 2. Install python 3.8.0: ```pyenv install 3.8.0```
-3. Install mysql8 in whatever way you prefer, and create a user named skeema with the password Pardot07
-4. Install Skeema from Homebrew
-5. Create a virtualenv for e11y:  ```pyenv virtualenv 3.8.0 e11y2```
-6. git clone this repo 
-7. ```cd top/level/of/this/project; pyenv local e11y2``` (This will make the e11y virtual environment activated whenever you enter this directory)
-8. ```cd provisioning; sudo pip install -r requirements.txt [--ignore-installed]```
-9. ```cd ../skeema_files;   skeema init -u skeema -pPardot07 -h localhost```
+3. Install MySQL: ```brew install mysql```
+4. Configure the user and grants: ```CREATE USER 'skeema'@'localhost' IDENTIFIED BY 'Pardot07'; GRANT ALL ON *.* to 'skeema'@'localhost'; FLUSH PRIVILEGES;```
+5. Install Skeema from Homebrew: ```brew install skeema/tap/skeema```
+6. Create a virtualenv for e11y: ```pyenv virtualenv 3.8.0 e11y2```
+7. Clone this repo: ```git clone git@github.com:blakebaxley/provisioning.git```
+8. Configure the virtual environment: ```cd top/level/of/this/project; pyenv local e11y2``` *(this will automatically activate the e11y virtual environment whenever you enter this directory)*
+9. Install requirements: ```cd provisioning; pip install -r requirements.txt --ignore-installed```
+10. Initialize Skeema: ```cd ../skeema_files; skeema init -u skeema -pPardot07 -h localhost```
 
 ## Running the app
 
